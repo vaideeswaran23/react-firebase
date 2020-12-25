@@ -7,7 +7,7 @@ import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
   <div>
-    <h1>SignUp</h1>
+    <h1 className="heading is-size-3">SignUp</h1>
     <SignUpForm />
   </div>
 );
@@ -72,45 +72,69 @@ class SignUpFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button type="submit" disabled={isInvalid} >Sign Up</button>
+        <div className="field">
+          <label className="label">Name</label>
+          <div className="control">
+            <input
+              name="username"
+              className="input"
+              value={username}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Email</label>
+          <div className="control">
+            <input
+              name="email"
+              className="input"
+              value={email}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Password</label>
+          <div className="control">
+            <input
+              name="passwordOne"
+              className="input"
+              value={passwordOne}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Confirm Password</label>
+          <div className="control">
+            <input
+              name="passwordTwo"
+              className="input"
+              value={passwordTwo}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Confirm Password"
+            />
+          </div>
+        </div>
+        <button className="button is-info" type="submit" disabled={isInvalid} >Sign Up</button>
 
-        {error && <p>{error.message}</p>}
+        {error && <p className="help is-danger">{error.message}</p>}
       </form>
     );
   }
 }
 
 const SignUpLink = () => (
-  <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+  <p className="mt-2 d-flex">
+    <span>Don't have an account?</span> <Link to={ROUTES.SIGN_UP}><span className="button is-success ml-2">Sign Up</span></Link>
   </p>
 );
 

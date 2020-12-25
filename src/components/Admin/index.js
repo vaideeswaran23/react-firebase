@@ -38,10 +38,10 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
 
     return (
-      <div>
-        <h1>Admin</h1>
+      <div className="hero">
+        <h1 className="heading is-size-3">Admin</h1>
 
-        {loading && <div>Loading ...</div>}
+        {loading && <span className="notification is-warning">User's can be loaded since test db security is changed  </span>}
 
         <UserList users={users} />
       </div>

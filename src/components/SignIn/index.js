@@ -8,8 +8,8 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div className="hero">
+    <h1 className="heading is-size-3">SignIn</h1>
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />
@@ -56,25 +56,36 @@ class SignInFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="password"
-          value={password}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <button disabled={isInvalid} type="submit">
+        <div className="field">
+          <label className="label">Email</label>
+          <div className="control">
+            <input
+              name="email"
+              className="input"
+              value={email}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">Password</label>
+          <div className="control">
+            <input
+              name="password"
+              className="input"
+              value={password}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <button className="button is-info" disabled={isInvalid} type="submit">
           Sign In
         </button>
-
-        {error && <p>{error.message}</p>}
+        {error && <p className="help is-danger">{error.message}</p>}
       </form>
     );
   }
