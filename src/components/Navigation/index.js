@@ -22,7 +22,7 @@ const NavigationAuth = () => (
      <span className="title is-3">Firebase Auth</span>
     </div>
 
-    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a href="#" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -31,16 +31,16 @@ const NavigationAuth = () => (
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
-      <a className="navbar-item">
+      <a href="#" className="navbar-item">
         <Link to={ROUTES.LANDING}>Landing</Link>
       </a>
-      <a className="navbar-item">
+      <a href="#" href="#" className="navbar-item">
         <Link to={ROUTES.HOME}>Home</Link>
       </a>
-      <a className="navbar-item">
+      <a href="#" className="navbar-item">
         <Link to={ROUTES.ACCOUNT}>Account</Link>
       </a>
-      <a className="navbar-item">
+      <a href="#"className="navbar-item">
         <Link to={ROUTES.ADMIN}>Admin</Link>
       </a>
     </div>
@@ -63,7 +63,7 @@ const NavigationNonAuth = () => (
       <span className="title is-3">Firebase Auth</span>
       </div>
 
-      <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a href="#" role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -72,7 +72,7 @@ const NavigationNonAuth = () => (
 
     <div id="navbarBasicExample" className="navbar-menu">
       <div className="navbar-start">
-        <a className="navbar-item">
+        <a href="#" className="navbar-item">
         <Link to={ROUTES.LANDING}>Landing</Link>
         </a>
       </div>
